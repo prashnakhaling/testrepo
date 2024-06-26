@@ -2,46 +2,46 @@
 
 /*
 Plugin Name: CPM Invest Profile
-Description: A plugin to create a custom post type for Investors.
+Description: A plugin to create a custom post type for Invests.
 Version: 1.0
 Author: Ranju and Prasna
 License: GPL2
 */
 // Function to register the custom post type
-function cpm_register_post_type() {
+function cpm_invest_register_post_type() {
 
     $labels = array(
-        'name'                  => _x( 'Investors', 'Post Type General Name', 'textdomain' ),
-        'singular_name'         => _x( 'Investor', 'Post Type Singular Name', 'textdomain' ),
-        'menu_name'             => __( 'Investors', 'textdomain' ),
-        'name_admin_bar'        => __( 'Investor', 'textdomain' ),
-        'archives'              => __( 'Investor Archives', 'textdomain' ),
-        'attributes'            => __( 'Investor Attributes', 'textdomain' ),
-        'parent_item_colon'     => __( 'Parent Investor:', 'textdomain' ),
-        'all_items'             => __( 'All Investors', 'textdomain' ),
-        'add_new_item'          => __( 'Add New Investor', 'textdomain' ),
-        'add_new'               => __( 'Add New', 'textdomain' ),
-        'new_item'              => __( 'New Investor', 'textdomain' ),
-        'edit_item'             => __( 'Edit Investor', 'textdomain' ),
-        'update_item'           => __( 'Update Investor', 'textdomain' ),
-        'view_item'             => __( 'View Investor', 'textdomain' ),
-        'view_items'            => __( 'View Investors', 'textdomain' ),
-        'search_items'          => __( 'Search Investor', 'textdomain' ),
-        'not_found'             => __( 'Not found', 'textdomain' ),
-        'not_found_in_trash'    => __( 'Not found in Trash', 'textdomain' ),
-        'featured_image'        => __( 'Featured Image', 'textdomain' ),
-        'set_featured_image'    => __( 'Set featured image', 'textdomain' ),
-        'remove_featured_image' => __( 'Remove featured image', 'textdomain' ),
-        'use_featured_image'    => __( 'Use as featured image', 'textdomain' ),
-        'insert_into_item'      => __( 'Insert into investor', 'textdomain' ),
-        'uploaded_to_this_item' => __( 'Uploaded to this investor', 'textdomain' ),
-        'items_list'            => __( 'Investors list', 'textdomain' ),
-        'items_list_navigation' => __( 'Investors list navigation', 'textdomain' ),
-        'filter_items_list'     => __( 'Filter investors list', 'textdomain' ),
+        'name'                  => _x( 'Invest', 'Post Type General Name', 'cpm_invest' ),
+        'singular_name'         => _x( 'Invest', 'Post Type Singular Name', 'cpm_invest' ),
+        'menu_name'             => __( 'Invests', 'cpm_invest' ),
+        'name_admin_bar'        => __( 'Invest', 'cpm_invest' ),
+        'archives'              => __( 'Invest Archives', 'cpm_invest' ),
+        'attributes'            => __( 'Invest Attributes', 'cpm_invest' ),
+        'parent_item_colon'     => __( 'Parent Invest:', 'cpm_invest' ),
+        'all_items'             => __( 'All Invests', 'cpm_invest' ),
+        'add_new_item'          => __( 'Add New Invest', 'cpm_invest' ),
+        'add_new'               => __( 'Add New', 'cpm_invest' ),
+        'new_item'              => __( 'New Invest', 'cpm_invest' ),
+        'edit_item'             => __( 'Edit Invest', 'cpm_invest' ),
+        'update_item'           => __( 'Update Invest', 'cpm_invest' ),
+        'view_item'             => __( 'View Invest', 'cpm_invest' ),
+        'view_items'            => __( 'View Invests', 'cpm_invest' ),
+        'search_items'          => __( 'Search Invest', 'cpm_invest' ),
+        'not_found'             => __( 'Not found', 'cpm_invest' ),
+        'not_found_in_trash'    => __( 'Not found in Trash', 'cpm_invest' ),
+        'featured_image'        => __( 'Featured Image', 'cpm_invest' ),
+        'set_featured_image'    => __( 'Set featured image', 'cpm_invest' ),
+        'remove_featured_image' => __( 'Remove featured image', 'cpm_invest' ),
+        'use_featured_image'    => __( 'Use as featured image', 'cpm_invest' ),
+        'insert_into_item'      => __( 'Insert into Invest', 'cpm_invest' ),
+        'uploaded_to_this_item' => __( 'Uploaded to this Invest', 'cpm_invest' ),
+        'items_list'            => __( 'Invests list', 'cpm_invest' ),
+        'items_list_navigation' => __( 'Invests list navigation', 'cpm_invest' ),
+        'filter_items_list'     => __( 'Filter Invests list', 'cpm_invest' ),
     );
     $args = array(
-        'label'                 => __( 'Investors', 'textdomain' ),
-        'description'           => __( 'Post Type for Investors', 'textdomain' ),
+        'label'                 => __( 'Invests', 'cpm_invest' ),
+        'description'           => __( 'Post Type for Invests', 'cpm_invest' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
         'hierarchical'          => false,
@@ -62,4 +62,4 @@ function cpm_register_post_type() {
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'cpm_register_post_type', 0 );
+add_action( 'init', 'cpm_invest_register_post_type', 0 );
